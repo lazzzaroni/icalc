@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "input input input input"
+    "clear plus-minus backspace ."
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . equal";
+  grid-template-rows: 5rem repeat(5, 4rem);
+  grid-auto-columns: 4rem;
+  gap: 0px;
+  border: 1px solid #333;
+}
+
+.buttons {
+  display: grid;
+  grid-template-areas:
+    "operation operation operation operation"
+    ". . . operation"
+    ". . . operation"
+    ". . . operation"
+    ". . . operation";
+  grid-auto-rows: 4rem;
+  grid-auto-columns: 4rem;
+}
+
+.numbers {
+  display: grid;
+  grid-template-areas:
+    "seven eight nine"
+    "four five six"
+    "one two three"
+    "zero double-zero dot";
+  grid-auto-rows: 4rem;
+  grid-auto-columns: 4rem;
+}
+
+.operations {
+  display: grid;
+  grid-template-areas:
+    "clear plus-minus backspace divide"
+    ". . . times"
+    ". . . minus"
+    ". . . plus"
+    ". . . equal";
+  grid-auto-rows: 4rem;
+  grid-auto-columns: 4rem;
+}
+
+.input {
+  grid-area: input;
+  text-align: right;
+  background-color: #222;
+  color: #fff;
+}
+
+.data {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 1rem 0.8rem 0 0.8rem;
+  font-family: monospace;
+  font-size: 1.4rem;
+}
+
+.error {
+  margin: 0 0.8rem;
+  color: #ff5353;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.plus-minus {
+  grid-area: plus-minus;
+}
+
+.backspace {
+  grid-area: backspace;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.times {
+  grid-area: times;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.double-zero {
+  grid-area: double-zero;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+button {
+  border: 1px solid #333;
+  background-color: #d8d9db;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: #ebebeb;
+}
+
+button:active {
+  background-color: #cacbce;
+}
+
+.operation {
+  background-color: #df974c;
+  color: #fff;
+}
+
+.operation:hover {
+  background-color: #da872f;
+}
+
+.operation:active {
+  background-color: #bf7322;
+}
+
+.active,
+.active:hover {
+  background-color: #ad681f;
+}
+
+.other {
+  background-color: #b5b7ba;
+}
+
+.other:hover {
+  background-color: #a0a2a7;
+}
+
+.other:active {
+  background-color: #8b8e92;
+}
